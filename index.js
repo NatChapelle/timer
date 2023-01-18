@@ -29,7 +29,12 @@ function countDown () {
     totalSeconds--;
     let minutes = Math.floor(totalSeconds / 60);
     let seconds = totalSeconds % 60;
+    // ajuster l'inscription en decimale < à 10
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
     countDownDisplay.innerText = `${minutes}:${seconds}`;
+
+    //à faire : stopper le compteur 
 }
 
 });
